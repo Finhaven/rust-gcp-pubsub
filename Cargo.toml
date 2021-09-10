@@ -1,0 +1,36 @@
+[package]
+edition = "2018"
+name = "gcp-pubsub"
+version = "0.1.0"
+authors = ["tehAnswer <sergiorodriguezgijon@gmail.com>"]
+description = "A forked and modernized version of the surf-based Google Cloud Platform PubSub client aka gcp-pubsub"
+license = "MIT"
+
+[dependencies.base64]
+version = "0.13.0"
+
+[dependencies.chrono]
+version = "0.4"
+features = ["serde"]
+
+[dependencies.goauth]
+version = "0.10.0"
+
+[dependencies.nanoid]
+version = "0.2.0"
+
+[dependencies.serde]
+version = "1.0"
+features = ["derive"]
+
+[dependencies.serde_derive]
+version = "1.0"
+
+[dependencies.serde_json]
+version = "1.0.40"
+
+[dependencies.smpl_jwt]
+version = "0.6.1"
+
+[dependencies.surf]
+version = "2.3.1"
