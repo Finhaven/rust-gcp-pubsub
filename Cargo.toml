@@ -13,6 +13,9 @@ version = "0.13.0"
 version = "0.4"
 features = ["serde"]
 
+[dependencies.thiserror]
+version = "1.0.30"
+
 [dependencies.goauth]
 version = "0.10.0"
 
