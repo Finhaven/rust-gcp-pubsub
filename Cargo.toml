@@ -20,7 +20,7 @@ version = "1.0.30"
 version = "0.10.0"
 
 [dependencies.nanoid]
-version = "0.2.0"
+version = "0.4"
 
 [dependencies.serde]
 version = "1.0"
@@ -30,10 +30,10 @@ features = ["derive"]
 version = "1.0"
 
 [dependencies.serde_json]
-version = "1.0.40"
+version = "1.0"
 
 [dependencies.smpl_jwt]
 version = "0.6.1"
 
 [dependencies.surf]
-version = "2.3.1"
+version = "2.3.2"
