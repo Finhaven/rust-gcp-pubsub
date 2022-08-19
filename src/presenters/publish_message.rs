@@ -8,9 +8,9 @@ pub struct PublishMessage {
 }
 
 impl PublishMessage {
-  pub fn from<T: serde::Serialize>(data: &T) -> Self {
+  pub fn from<T: serde::Serialize>(data: &T, ordering_key: String) -> Self {
     Self {
-      messages: vec![EncodedMessage::new(data)],
+      messages: vec![EncodedMessage::new(data, ordering_key)],
     }
   }
 }

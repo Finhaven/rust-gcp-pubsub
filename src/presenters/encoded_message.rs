@@ -5,8 +5,10 @@ use serde::Serialize;
 use serde_derive::Deserialize;
 
 #[derive(Deserialize, Clone, Serialize, Debug)]
+#[serde(rename_all = "camelCase")]
 pub struct EncodedMessage {
   pub data: String,
+  pub ordering_key: String,
   #[serde(skip_serializing, alias = "messageId")]
   pub message_id: String,
   #[serde(skip_serializing, alias = "publishTime")]
@@ -25,13 +27,14 @@ impl EncodedMessage {
     base64::decode(&self.data)
   }
 
-  pub fn new<T: serde::Serialize>(data: &T) -> Self {
+  pub fn new<T: serde::Serialize>(data: &T, ordering_key: String) -> Self {
     let json = serde_json::to_string(data).unwrap();
     let data = base64::encode(&json);
     EncodedMessage {
       message_id: "".to_owned(),
       publish_time: Utc::now(),
       data,
+      ordering_key,
     }
   }
 }

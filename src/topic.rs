@@ -27,7 +27,7 @@ impl Topic {
 
     pub async fn publish<T: Serialize>(&self, data: T) -> Result<TopicMessageResponse, Error> {
         let url = format!("https://pubsub.googleapis.com/v1/{}:publish", self.name);
-        let payload = PublishMessage::from(&data);
+        let payload = PublishMessage::from(&data, self.name.clone());
         let request_builder = self
             .client
             .base_request(Method::Post, &url)?

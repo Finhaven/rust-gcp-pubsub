@@ -10,7 +10,7 @@ license = "MIT"
 version = "0.13.0"
 
 [dependencies.chrono]
-version = "0.4"
+version = "0.4.22"
 features = ["serde"]
 
 [dependencies.thiserror]
