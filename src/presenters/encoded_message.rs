@@ -5,7 +5,6 @@ use serde::Serialize;
 use serde_derive::Deserialize;
 
 #[derive(Deserialize, Clone, Serialize, Debug)]
-#[serde(rename_all = "camelCase")]
 pub struct EncodedMessage {
   pub data: String,
   pub ordering_key: String,
